@@ -2,13 +2,16 @@
 
 Implémentation en C d’un **Puissance 4 jouable à distance par deux clients reliés à un serveur central via sockets TCP**.
 
-## En bref — contribution & valeur
+## Ma contribution
 
-- **Implémenté** une architecture client/serveur utilisant des sockets TCP.
-- **Conçu** un protocole d’échange dédié pour synchroniser les deux joueurs et l’état de la partie.
-- **Géré** les entrées invalides, déconnexions et cas limites afin d’éviter de bloquer une partie.
-- **Ajouté** un système de replay permettant de relancer une partie sans redémarrer les clients.
-- **Centralisé** compilation et nettoyage du projet via Makefile.
+J’ai réalisé **toute la partie serveur** du projet. Le client a été développé par un autre membre de l’équipe.
+
+- **Développé** le serveur TCP en C : ouverture du socket, acceptation des connexions et gestion de deux joueurs.
+- **Implémenté** la logique de partie côté serveur : attribution des pions, gestion des tours, validation des coups et détection victoire / match nul.
+- **Géré** les cas d’erreur : login déjà utilisé, mauvais tour, colonne invalide ou pleine, partie complète et déconnexion d’un joueur.
+- **Intégré** le système de replay afin de relancer une partie sans redémarrer le serveur.
+- **Participé** au protocole d’échange client/serveur et à l’intégration globale du projet.
+- **Contribué** à l’organisation et à la compilation via Makefile.
 
 ## Stack technique
 
